@@ -1,0 +1,4 @@
+{
+  "name": "wdio-automation-mono-repo",
+  "packageManager": "yarn@4.12.0"
+}
