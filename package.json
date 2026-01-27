@@ -1,6 +1,6 @@
 {
   "name": "wdio-automation-mono-repo",
-  "private": true,
+  "private": false,
   "packageManager": "yarn@4.12.0",
   "engines": {
     "node": "^22.12.0"
