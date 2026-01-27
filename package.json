@@ -1,4 +1,27 @@
 {
   "name": "wdio-automation-mono-repo",
-  "packageManager": "yarn@4.12.0"
+  "private": true,
+  "packageManager": "yarn@4.12.0",
+  "engines": {
+    "node": "^22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tudaybhaskar/wdio-automation-mono-repo.git"
+  },
+  "workspaces": [
+    "tools/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test:ui": "yarn workspace wdio-test-automation-suite test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@typescript-eslint/eslint-plugin": "^8.53.1",
+    "@typescript-eslint/parser": "^8.53.1",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.1"
+  }
 }

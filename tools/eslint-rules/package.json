@@ -1,0 +1,11 @@
+{
+    "name": "@framework-tools/eslint-rules",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tudaybhaskar/wdio-automation-mono-repo.git",
+        "directory": "tools/eslint-rules"
+    }
+}

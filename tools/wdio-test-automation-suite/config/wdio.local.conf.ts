@@ -1,0 +1,8 @@
+import mergeWith from 'lodash/mergeWith';
+import { config as baseConfig } from './wdio.conf';
+import { customizer } from './runner-helpers/config-customizer';
+import { chromeCapabilities } from './runner-helpers/browser-capabilities';
+export const config = mergeWith({
+    maxinstances: 1,
+    capabilities: [chromeCapabilities],
+}, baseConfig, customizer);
