@@ -1,0 +1,62 @@
+name: Enterprise WebdriverIO CI
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/wdio-test-automation-suite/**'
+      - 'tools/eslint-rules/**'
+      - '.github/workflows/main-ci.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'packages/wdio-test-automation-suite/**'
+      - 'tools/eslint-rules/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    # Required for Github pages deployment
+    permissions: 
+      contents: write
+      
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'yarn'
+          
+      - name: Install Dependencies
+        # Use --prefer-offline for speed if the cache is a miss
+        run: yarn install --frozen-lockfile
+
+      - name: Run WDIO Tests
+        # Using the workspace command to target the suite
+        run: yarn workspace wdio-test-automation-suite run wdio:ci
+
+      - name: Upload Screenshots on Failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-failure-evidence-allure
+          path: tools/wdio-test-automation-suite/wdio/allureScreenshots
+          retention-days: 2
+
+      - name: Generate Allure Report
+        if: always()
+        run: yarn workspace wdio-test-automation-suite run allure generate wdio/allure-results --clean
+
+      - name: Deploy Allure to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./tools/wdio-test-automation-suite/wdio/allure-report
+          destination_dir: allure-history
+      
+      
+  
