@@ -56,7 +56,7 @@ jobs:
 
       - name: Generate Allure Report
         if: always()
-        run: yarn workspace @framework-tools/wdio-test-automation-suite run allure generate wdio/allure-results --clean
+        run: yarn workspace @framework-tools/wdio-test-automation-suite run allure:ci
 
       - name: Deploy Allure to Github Pages
         if: always()
