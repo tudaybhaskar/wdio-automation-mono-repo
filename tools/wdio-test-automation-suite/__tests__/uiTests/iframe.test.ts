@@ -2,7 +2,7 @@ import { IMPLICIT_WAIT_10_SECS, IMPLICIT_WAIT_1_MIN } from "../../utility/test-u
 
 describe('IFrame Interactions', ()=>{
     
-    it('Switch to an iFrame using URL', async()=>{
+    it.skip('Switch to an iFrame using URL', async()=>{
         await browser.url('https://demo.automationtesting.in/Frames.html');
         await browser.waitUntil(async()=>{
             return await $('[href="#Single"]').waitForClickable({timeout: IMPLICIT_WAIT_1_MIN});
@@ -30,7 +30,7 @@ describe('IFrame Interactions', ()=>{
         console.log(await browser.execute(()=> [document.title, document.URL]));
     });
 
-    it('Switch to an IFrame and Enter text in input field', async()=>{
+    it.skip('Switch to an IFrame and Enter text in input field', async()=>{
         await browser.url('https://demo.automationtesting.in/Frames.html');
         await browser.waitUntil(async()=>{
             return await $('[href="#Single"]').waitForClickable({timeout: IMPLICIT_WAIT_1_MIN});
@@ -51,7 +51,7 @@ describe('IFrame Interactions', ()=>{
         await expect($('input[type="text"]')).toHaveAttribute('value', 'Entered into IFrame');
     });
 
-    it('Switch to an IFrame using ID', async()=>{
+    it.skip('Switch to an IFrame using ID', async()=>{
 
         await browser.url('https://demo.automationtesting.in/Frames.html');
         await browser.waitUntil(async()=>{

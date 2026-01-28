@@ -33,6 +33,7 @@
   },
   "scripts": {
     "test:local": "wdio run ./config/wdio.local.conf.ts",
-    "test:ci": "wdio run ./config/wdio.ci.conf.ts"
+    "test:ci": "wdio run ./config/wdio.ci.conf.ts",
+    "allure:ci": "allure generate ./wdio/allure/allure-results --clean"
   }
 }

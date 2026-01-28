@@ -13,7 +13,7 @@ export const config : Options.Testrunner = mergeWith({
         [
             'allure',
             {
-                outputDir: 'wdio/allure-results',
+                outputDir: 'wdio/allure/allure-results',
                 disableWebdriverStepsReporting: true,
                 disableWebdriverScreenshotsReporting: false,
                 addConsoleLogs:true,
@@ -22,7 +22,7 @@ export const config : Options.Testrunner = mergeWith({
         [
             'junit',
             {
-                outputDir: 'wdio/junit-results',
+                outputDir: 'wdio/junit/junit-results',
                 outputFileFormat: function(options){
                     return `results-${options.cid}.xml`;
                 }
