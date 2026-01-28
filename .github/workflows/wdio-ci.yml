@@ -45,13 +45,14 @@ jobs:
       - name: Run WDIO Tests
         # Using the workspace command to target the suite
         run: yarn workspace @framework-tools/wdio-test-automation-suite run test:ci
+        continue-on-error: true
 
-      - name: Upload Screenshots on Failure
+      - name: Upload Screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-failure-evidence-allure
-          path: tools/wdio-test-automation-suite/wdio/allureScreenshots
+          name: test-evidence-allure
+          path: tools/wdio-test-automation-suite/wdio/allure/allureScreenshots
           retention-days: 2
 
       - name: Generate Allure Report

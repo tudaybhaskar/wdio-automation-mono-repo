@@ -1,4 +1,5 @@
 import { TestVariation } from "./testVariation";
+import allureReporter from '@wdio/allure-reporter';
 
 export class HomePage{
     rootElement: ChainablePromiseElement;
@@ -18,7 +19,9 @@ export class HomePage{
     }
 
     clickOnSplitTesting = async()=>{
-        await this.splitTestingLink.click();
+        await allureReporter.step('click on Split Testing link', async()=>{
+            await this.splitTestingLink.click();
+        });
         return TestVariation.create();
     };
 
