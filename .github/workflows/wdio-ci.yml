@@ -5,7 +5,7 @@ on:
     paths:
       - 'tools/wdio-test-automation-suite/**'
       - 'tools/eslint-rules/**'
-      - '.github/workflows/main-ci.yml'
+      - '.github/workflows/wdio-ci.yml'
   pull_request:
     branches: [master]
     paths:

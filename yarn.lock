@@ -306,19 +306,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@framework-tools/wdio-automation-mono-repo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@framework-tools/wdio-automation-mono-repo@workspace:."
-  dependencies:
-    "@eslint/js": "npm:^9.39.2"
-    "@typescript-eslint/eslint-plugin": "npm:^8.53.1"
-    "@typescript-eslint/parser": "npm:^8.53.1"
-    eslint: "npm:^9.39.2"
-    typescript: "npm:^5.9.3"
-    typescript-eslint: "npm:^8.53.1"
-  languageName: unknown
-  linkType: soft
-
 "@framework-tools/wdio-test-automation-suite@workspace:tools/wdio-test-automation-suite":
   version: 0.0.0-use.local
   resolution: "@framework-tools/wdio-test-automation-suite@workspace:tools/wdio-test-automation-suite"
@@ -5600,6 +5587,19 @@ __metadata:
   checksum: 10c0/5b61ca583a95e2dd85d7078400190efd452e05751a64accb8c06ce4db65d7e0b0cde9917d705e826a2e05cc2548f61efde115ffa374c3e436d04be45c889e5b4
   languageName: node
   linkType: hard
+
+"wdio-automation-mono-repo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "wdio-automation-mono-repo@workspace:."
+  dependencies:
+    "@eslint/js": "npm:^9.39.2"
+    "@typescript-eslint/eslint-plugin": "npm:^8.53.1"
+    "@typescript-eslint/parser": "npm:^8.53.1"
+    eslint: "npm:^9.39.2"
+    typescript: "npm:^5.9.3"
+    typescript-eslint: "npm:^8.53.1"
+  languageName: unknown
+  linkType: soft
 
 "webdriver@npm:9.23.2":
   version: 9.23.2
