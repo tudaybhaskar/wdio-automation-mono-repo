@@ -28,11 +28,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'yarn'
+          # cache: 'yarn'
+          # we remove the cache property here temporarily because setup-nodes's built-in cache can
+          # sometimes conflict with manual Corepack setups in Yarn modern
+
+      - name: Enable Corepack
+        run: corepack enable
           
       - name: Install Dependencies
         # Use --prefer-offline for speed if the cache is a miss
-        run: yarn install --frozen-lockfile
+        # Yarn 4 uses different flags; --frozen-lockfile is default in CI
+        run: yarn install
 
       - name: Run WDIO Tests
         # Using the workspace command to target the suite
