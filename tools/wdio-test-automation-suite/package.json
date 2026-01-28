@@ -33,6 +33,6 @@
   },
   "scripts": {
     "test:local": "wdio run ./config/wdio.local.conf.ts",
-    "test:ci": "wdio run ./config/wdio.ci.config.ts"
+    "test:ci": "wdio run ./config/wdio.ci.conf.ts"
   }
 }
