@@ -33,7 +33,9 @@ jobs:
           # sometimes conflict with manual Corepack setups in Yarn modern
 
       - name: Enable Corepack
-        run: corepack enable
+        run: |
+          corepack enable
+          yarn --version # Debug step tp verify Yarn 4 is active
           
       - name: Install Dependencies
         # Use --prefer-offline for speed if the cache is a miss
