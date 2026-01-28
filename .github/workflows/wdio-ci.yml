@@ -44,7 +44,7 @@ jobs:
 
       - name: Run WDIO Tests
         # Using the workspace command to target the suite
-        run: yarn workspace wdio-test-automation-suite run wdio:ci
+        run: yarn workspace @framework-tools/wdio-test-automation-suite run test:ci
 
       - name: Upload Screenshots on Failure
         if: always()
