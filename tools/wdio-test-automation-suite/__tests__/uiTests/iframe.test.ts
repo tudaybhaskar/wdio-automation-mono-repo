@@ -84,7 +84,6 @@ describe('IFrame Interactions', ()=>{
         await browser.waitUntil(async()=>{
             return await $('input[type="text"]').waitForEnabled();
         },{timeout: IMPLICIT_WAIT_1_MIN});
-        console.log('Single Frame');
         await $('input[type="text"]').setValue('Entered into IFrame');
         await browser.pause(IMPLICIT_WAIT_10_SECS);
         await expect($('h5')).toHaveText('iFrame Demo');
