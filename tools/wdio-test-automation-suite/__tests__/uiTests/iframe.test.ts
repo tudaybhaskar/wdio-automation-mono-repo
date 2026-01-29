@@ -8,8 +8,9 @@ describe('IFrame Interactions', ()=>{
         await allureReporter.addDescription('Validation home page header');
         await allureReporter.addOwner('Herokuapp Website');
         await allureReporter.addSeverity('Critical');
-        
+
         await browser.url('https://demo.automationtesting.in/Frames.html');
+        await browser.setTimeout({'pageLoad': IMPLICIT_WAIT_1_MIN * 2});
         await browser.waitUntil(async()=>{
             return await $('[href="#Single"]').waitForClickable({timeout: IMPLICIT_WAIT_1_MIN});
         }, {timeout: IMPLICIT_WAIT_1_MIN * 2, timeoutMsg: 'Single Iframe is not clickable'});

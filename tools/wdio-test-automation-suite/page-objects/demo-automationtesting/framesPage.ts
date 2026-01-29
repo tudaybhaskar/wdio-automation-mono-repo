@@ -8,7 +8,7 @@ export class FramesPage{
 
     static async create(rootElement: ChainablePromiseElement = $('[href="#Single"]')){
         const page = new FramesPage(rootElement);
-        await expect(rootElement).toBeDisabled();
+        await expect(rootElement).toBeEnabled();
         return page;
     }
 
