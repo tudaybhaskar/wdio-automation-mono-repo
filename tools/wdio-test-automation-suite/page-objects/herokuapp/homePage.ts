@@ -1,3 +1,4 @@
+import { IMPLICIT_WAIT_30_SECS } from "../../utility/test-util";
 import { TestVariation } from "./testVariation";
 import allureReporter from '@wdio/allure-reporter';
 
@@ -10,6 +11,7 @@ export class HomePage{
 
     static async create(rootElement: ChainablePromiseElement = $('#content')): Promise<HomePage>{
         const page = new HomePage(rootElement);
+        await browser.setTimeout({'pageLoad': IMPLICIT_WAIT_30_SECS * 3});
         await expect(rootElement.$('h1')).toHaveText('Welcome to the-internet');
         return page;
     }

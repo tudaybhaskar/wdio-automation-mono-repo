@@ -47,16 +47,15 @@ jobs:
         run: yarn workspace @framework-tools/wdio-test-automation-suite run test:ci
         continue-on-error: true
 
-      - name: Upload Screenshots
+      - name: Upload Allure Results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-evidence-allure
-          path: tools/wdio-test-automation-suite/wdio/allure/allureScreenshots
+          name: allure-raw-results
+          path: tools/wdio-test-automation-suite/wdio/allure/allure-results
           retention-days: 2
 
       - name: Generate Allure Report
-        if: always()
         run: yarn workspace @framework-tools/wdio-test-automation-suite run allure:ci
 
       - name: Deploy Allure to Github Pages

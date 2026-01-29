@@ -323,6 +323,7 @@ __metadata:
     "@wdio/shared-store-service": "npm:^9.23.2"
     "@wdio/spec-reporter": "npm:^9.23.2"
     "@wdio/types": "npm:^9.23.2"
+    allure-commandline: "npm:^2.36.0"
     chromedriver: "npm:^144.0.0"
     eslint: "npm:^9.39.2"
     eslint-filtered-fix: "npm:^0.3.0"
@@ -1446,6 +1447,15 @@ __metadata:
     json-schema-traverse: "npm:^0.4.1"
     uri-js: "npm:^4.2.2"
   checksum: 10c0/41e23642cbe545889245b9d2a45854ebba51cda6c778ebced9649420d9205f2efb39cb43dbc41e358409223b1ea43303ae4839db682c848b891e4811da1a5a71
+  languageName: node
+  linkType: hard
+
+"allure-commandline@npm:^2.36.0":
+  version: 2.36.0
+  resolution: "allure-commandline@npm:2.36.0"
+  bin:
+    allure: bin/allure
+  checksum: 10c0/5d68faaaf95b0f6a44d3e041139ab5204aadbbf4602166596478972a6f1cef143a976c7d4962b4cc6aaa26cbbad125225a19fe46a962f9b0377ca9d7f75fcd5a
   languageName: node
   linkType: hard
 
