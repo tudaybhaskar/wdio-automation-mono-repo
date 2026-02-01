@@ -37,7 +37,7 @@
     "test:ci": "wdio run ./config/wdio.ci.conf.ts",
     "allure:generate": "allure generate wdio/allure/allure-results --clean -o wdio/allure/allure-report",
     "allure:open": "allure open wdio/allure/allure-report",
-    "allure:ci": "yarn allure:generate && yarn allure:open",
+    "allure:ci": "yarn allure:generate",
     "allure:local": "yarn allure:generate && yarn allure:open"
   }
 }
