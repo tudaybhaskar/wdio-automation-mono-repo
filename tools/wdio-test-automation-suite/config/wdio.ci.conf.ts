@@ -31,7 +31,7 @@ export const config : Options.Testrunner = mergeWith({
     ],
     mochaOpts:{
         retries: 1,
-        timeout: IMPLICIT_WAIT_1_MIN * 20,
+        timeout: IMPLICIT_WAIT_1_MIN * 2,
     }
 
 }, baseConfig, customizer);

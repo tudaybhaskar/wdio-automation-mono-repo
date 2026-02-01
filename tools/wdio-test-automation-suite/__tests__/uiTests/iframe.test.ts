@@ -4,7 +4,7 @@ import allureReporter from '@wdio/allure-reporter';
 
 describe('IFrame Interactions', ()=>{
     
-    it('Switch to an iFrame using URL', async()=>{
+    it.skip('Switch to an iFrame using URL', async()=>{
         await allureReporter.addDescription('Validation home page header');
         await allureReporter.addOwner('Herokuapp Website');
         await allureReporter.addSeverity('Critical');

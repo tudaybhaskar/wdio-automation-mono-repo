@@ -65,6 +65,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./tools/wdio-test-automation-suite/wdio/allure/allure-report
           destination_dir: allure-history
-      
-      
-  
