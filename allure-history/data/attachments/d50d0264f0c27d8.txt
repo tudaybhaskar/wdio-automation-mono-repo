@@ -1,0 +1,4 @@
+.........Console Logs.........
+
+-- Wdio.config -- Test title:  Validate ShadowDom header & Text
+Execution completed for  Validate ShadowDom header & Text

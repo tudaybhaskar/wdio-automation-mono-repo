@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2","Switch to an iFrame using URL","","2026-02-01","skipped","2026-02-01","","","",""
+"","0","Switch to an IFrame and Enter text in input field","","2026-02-01","skipped","2026-02-01","","","",""
+"Validate ShadowDom header","1363","Validate ShadowDom header & Text","Home Page validations","2026-02-01","passed","2026-02-01","","","",""
+"","0","Switch to an IFrame using ID","","2026-02-01","skipped","2026-02-01","","","",""
+"","0","Switch to Nested Frames","","2026-02-01","skipped","2026-02-01","","","",""
